@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Landing Page</title>
     <style>
         * {
             padding: 0;
@@ -13,52 +14,290 @@
             box-sizing: border-box;
         }
 
-        .container {
-            place-items: center;
-            display: grid;
-            box-shadow: 2px 2px 2px 1px;
-            height: 50vh;
-            border-radius: 8px;
-            margin-left: 10vw;
-            margin-right: 10vw;
-            margin-top: 20vh;
+        body {
+            font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+                "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            background-color: #eee;
         }
 
-        button {
-            height: 4vh;
-            border-color: green;
-            background-color: rgb(138, 255, 138);
-            margin: 5px;
+        #header {
+            padding-top: 20px;
+            display: flex;
+        }
+
+        img {
+            padding-left: 10px;
+            width: 20vw;
+        }
+
+        #nav-bar {
+            top: 3%;
+            position: absolute;
+            right: 5%;
+        }
+
+        .nav-link {
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .h1 {
+            margin-top: 8vh;
+            text-align: center;
+        }
+
+        #form {
+            place-items: center;
+            display: grid;
         }
 
         input {
-            height: 6vh;
-            width: 60vw;
-            outline: none;
+            width: 30vw;
+            height: 4vh;
+        }
+
+        #submit {
+            width: 16vw;
+        }
+
+        span {
+            place-items: center;
+            display: grid;
+            margin-top: 8vh;
+        }
+
+        .content {
+            display: grid;
+            place-items: center;
+        }
+
+        .head {
+            margin-top: 3vh;
+        }
+
+        .des {
+            margin-top: 20px;
+        }
+
+        .des p {
+            text-align: center;
+        }
+
+        .purchase {
+            display: grid;
+            margin-top: 6vh;
+            place-items: center;
+        }
+
+        .border {
+            border-radius: 5px;
+            margin-top: 3vh;
+            border: 2px solid black;
+            justify-content: space-evenly;
+        }
+
+        .purchase_head {
+            margin-top: 4vh;
+            text-align: center;
+        }
+
+        .purchase_amount {
+            text-align: center;
+        }
+
+        .purchase_des {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .purchase_btn {
+            place-items: center;
+            display: grid;
+        }
+
+        .a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
             border: none;
-            border-bottom: 1px solid black;
+            background-color: gold;
+            border-radius: 2px;
+            padding: 5px;
             margin-top: 10px;
             margin-bottom: 10px;
         }
 
-        #sub {
-            border: 2px solid black;
-            width: 60vw;
-            border-radius: 3px;
-            height: 6vh;
+        .a:hover {
+            background-color: orange;
+        }
+
+        #submit {
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 820px) {
+            img {
+                padding-left: 10px;
+                width: 40vw;
+            }
+
+            #header {
+                display: grid;
+                place-items: center;
+            }
+
+            #nav-bar {
+                display: grid;
+            }
+
+            #d {
+                top: 10%;
+                padding: 20px;
+                position: absolute;
+                left: 50%;
+            }
+
+            .h1 {
+                margin-top: 34vh;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+
+            #purchase {
+                margin-left: 40px;
+            }
+
+            img {
+                padding-left: 10px;
+                width: 60vw;
+            }
+
+            #header {
+                display: grid;
+                place-items: center;
+            }
+
+            #nav-bar {
+                display: grid;
+            }
+
+            #d {
+                top: 10%;
+                padding: 20px;
+                position: absolute;
+                left: 50%;
+            }
+
+        }
+
+        @media only screen and (max-width:420px) {
+            .h1 {
+                margin-left: 16vw;
+
+            }
+
+            #features {
+                margin-left: 16vw;
+            }
+
         }
     </style>
 </head>
 
 <body>
-    <form>
-        <div class="container">
-            <input type="text" placeholder="username">
-            <input type="password" placeholder="password">
-            <input id="sub" type="submit">
-            <!-- <button>Submit</button> -->
+    <header id="header">
+
+        <img src="https://s3.amazonaws.com/freecodecamp/original_trombones.png" alt="" id="header-img">
+        <div id="d">
+            <nav id="nav-bar">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#video" class="nav-link">How It Works</a>
+                <a href="#purchase" class="nav-link">Pricing</a>
+            </nav>
         </div>
-    </form>
+    </header>
+    <div class="container">
+        <h1 class="h1">Handcrafted, home-made masterpieces</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input type="email" id="email" placeholder="Enter Your Email Address">
+            <input type="submit" id="submit">
+        </form>
+    </div>
+    <span>
+        <iframe id="video" width="483" height="315" src="https://www.youtube.com/embed/y8Yv4pnO7qc"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </span>
+    <div class="content" id="features">
+        <div class="head">
+            <h2>Premium Materials</h2>
+        </div>
+        <div class="des">
+            <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your
+                purchase.</p>
+        </div>
+        <div class="head">
+            <h2>Fast Shipping</h2>
+        </div>
+        <div class="des">
+            <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free
+                returns if you are not satisfied.</p>
+        </div>
+        <div class="head">
+            <h2>Quality Assurance</h2>
+        </div>
+        <div class="des">
+            <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the
+                pitch of your instrument.</p>
+        </div>
+    </div>
+    <div class="purchase" id="purchase">
+        <div class="border">
+            <div class="purchase_head">
+                <h3>TENOR TROMBONE</h3>
+            </div>
+            <div class="purchase_amount">
+                <h1>$600</h1>
+            </div>
+            <div class="purchase_des">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+            <div class="purchase_btn">
+                <a href="#" class="a">SELECT</a>
+            </div>
+        </div>
+        <div class="border">
+            <div class="purchase_head">
+                <h3>BASS TROMBONE</h3>
+            </div>
+            <div class="purchase_amount">
+                <h1>$900</h1>
+            </div>
+            <div class="purchase_des">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+            <div class="purchase_btn">
+                <a href="#" class="a">SELECT</a>
+            </div>
+        </div>
+        <div class="border">
+            <div class="purchase_head">
+                <h3>VALVE TROMBONE</h3>
+            </div>
+            <div class="purchase_amount">
+                <h1>$1200</h1>
+            </div>
+            <div class="purchase_des">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+            </div>
+            <div class="purchase_btn">
+                <a href="#" class="a">SELECT</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
