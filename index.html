@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            place-items: center;
+            display: grid;
+            box-shadow: 2px 2px 2px 1px;
+            height: 50vh;
+            border-radius: 8px;
+            margin-left: 10vw;
+            margin-right: 10vw;
+            margin-top: 20vh;
+        }
+
+        button {
+            height: 4vh;
+            border-color: green;
+            background-color: rgb(138, 255, 138);
+            margin: 5px;
+        }
+
+        input {
+            height: 6vh;
+            width: 60vw;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid black;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        #sub {
+            border: 2px solid black;
+            width: 60vw;
+            border-radius: 3px;
+            height: 6vh;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <div class="container">
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+            <input id="sub" type="submit">
+            <!-- <button>Submit</button> -->
+        </div>
+    </form>
+</body>
+
+</html>
